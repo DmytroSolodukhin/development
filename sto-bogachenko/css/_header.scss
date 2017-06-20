@@ -1,0 +1,86 @@
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+#menu-fixed {
+  width: 100%;
+  //position: fixed;
+  z-index: 7;
+  background: #323a45;
+  @include padding(10px 30px);
+}
+
+
+#menu-fixed.active {
+  background: #81868e;
+  transition: 3s;
+  opacity: 0.5;
+  &:hover {
+    background: #323a45;
+    opacity: 1;
+  }
+}
+
+.headlist {
+  @include padding(10px 0);
+  &__list {
+    display: inline-block;
+    @include padding(0 3%);
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 3.4;
+    text-align: center;
+    padding: 0 5%;
+    transition: 1s;
+    &:hover {
+      padding: 0;
+      font-size: 18px;
+      line-height: 2.4;
+      color: #00bac6;
+      transition: 1s;
+    }
+  }
+}
+.call-us {
+  padding-top: 5px;
+  float: right;
+  &__link {
+    display: block;
+    color: #ffffff;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.1;
+    text-align: center;
+    transition: 1s;
+    &:hover {
+      color: #00bac6;
+      transition: 1s;
+    }
+  }
+}
+
+.call-us .fa {
+  vertical-align: baseline;
+  font-size: 28px;
+  margin: 0 5px;
+  color: #00bac6;
+}
+
+#headsvg {
+  fill: #00bac6;
+}
+
+
+@media screen and (max-width: 1199px) {
+.headlist {
+  float: right;
+  text-align: right;
+}
+}
